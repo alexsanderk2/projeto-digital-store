@@ -1,6 +1,6 @@
 # Digital Store
 
-Projeto de e-commerce **Drip Store / Digital Store** desenvolvido em React como parte do curso da Digital College, seguindo os requisitos de [projeto-digital-store](https://github.com/digitalcollegebr/projeto-digital-store) e o layout do Figma.
+Projeto de e-commerce **Drip Store / Digital Store** desenvolvido em React como parte do curso da Digital College (Curso de Full Stack da Geração Tech - IEL), seguindo os requisitos de [projeto-digital-store](https://github.com/digitalcollegebr/projeto-digital-store) e o layout do Figma.
 
 ## Tecnologias
 
