@@ -5,7 +5,8 @@ import ProductListing from '../../components/ProductListing/ProductListing';
 import { products } from '../../data/products';
 import './HomePage.css';
 
-const slides = Array.from({ length: 8 }, (_, i) => ({ src: `/home-slide-${i + 1}.jpeg` }));
+// home-slide-2 a home-slide-8
+const slides = Array.from({ length: 7 }, (_, i) => ({ src: `/home-slide-${i + 2}.jpeg` }));
 
 const collections = [
   { src: '/collection-1.png', alt: 'Coleção Supreme' },
