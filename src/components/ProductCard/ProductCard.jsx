@@ -1,0 +1,34 @@
+import { Link } from 'react-router-dom';
+import { formatPrice } from '../../utils/formatPrice';
+import './ProductCard.css';
+
+const ProductCard = ({ id, image, name, price, priceDiscount }) => {
+  const hasDiscount = priceDiscount !== undefined && priceDiscount !== null;
+  const content = (
+    <>
+      <div className="product-card__image">
+        {hasDiscount && (
+          <span className="product-card__tag">
+            {Math.round((1 - priceDiscount / price) * 100)}% OFF
+          </span>
+        )}
+        <img src={image} alt={name} width={292} height={321} />
+      </div>
+      <p className="product-card__name">{name}</p>
+      <div className="product-card__prices">
+        <span className={hasDiscount ? 'product-card__price product-card__price--old' : 'product-card__price'}>
+          {formatPrice(price)}
+        </span>
+        {hasDiscount && <span className="product-card__price">{formatPrice(priceDiscount)}</span>}
+      </div>
+    </>
+  );
+
+  return (
+    <article className="product-card">
+      {id ? <Link to={`/product/${id}`}>{content}</Link> : content}
+    </article>
+  );
+};
+
+export default ProductCard;
